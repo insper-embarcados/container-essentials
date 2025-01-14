@@ -1,14 +1,23 @@
 {
 	"image": "rafaelcorsi/embarcados",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/embarcados/projectFolder,type=bind",
-	"workspaceFolder": "/workspace/embarcados/projectFolder",
+	//defines debug
+	"workspaceFolder": "/workspace/embarcados/debugging",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/embarcados/debugging,type=bind",
+
 	"mounts": [
 		{	
-			// mounts working-area based on root directory
+			// mounts working-area based on debug directory
+			"source": "${localWorkspaceFolder}/",
+			"target": "/workspace/embarcados/working-area/",
+			"type": "bind"
+		},
+		// includes the infra-test-submodules
+		{
 			"source": "${localWorkspaceFolder}/../",
-			"target": "/workspace/embarcados/working-area",
+			"target": "/workspace/embarcados/working-area/",
 			"type": "bind"
 		}
+
 	],
 	"remoteEnv": {
 		"WOKWI_CLI_TOKEN": "${localEnv:WOKWI_CLI_TOKEN}"
@@ -39,7 +48,6 @@
 				"wokwi.wokwi-vscode"
 			  ]
 		}
-	},
-	"postCreateCommand": "git pull --recurse-submodules"
+	}
 
 }

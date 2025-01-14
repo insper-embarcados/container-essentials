@@ -1,9 +1,9 @@
 {
     "folders": [
         // uncomment to show .devcontainer folder
-        // {
-        //     "path": "."
-        // },
+        {
+            "path": "."
+        },
         {
             // opens working-area folder in mult workspaces
             "path": "../working-area"
