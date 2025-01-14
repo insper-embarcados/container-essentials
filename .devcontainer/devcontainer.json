@@ -39,6 +39,7 @@
 				"wokwi.wokwi-vscode"
 			  ]
 		}
-	}
+	},
+	"postCreateCommand": "git pull --recurse-submodules"
 
 }
