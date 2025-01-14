@@ -5,7 +5,7 @@
 	"mounts": [
 		{	
 			// mounts working-area based on root directory
-			"source": "${localWorkspaceFolder}/",
+			"source": "${localWorkspaceFolder}/./",
 			"target": "/workspace/embarcados/working-area",
 			"type": "bind"
 		}
