@@ -1,5 +1,15 @@
 {
 	"image": "rafaelcorsi/embarcados",
+	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/embarcados/projectFolder,type=bind",
+	"workspaceFolder": "/workspace/embarcados/projectFolder",
+	"mounts": [
+		{	
+			// mounts working-area based on root directory
+			"source": "${localWorkspaceFolder}/./",
+			"target": "/workspace/embarcados/working-area",
+			"type": "bind"
+		}
+	],
 	"remoteEnv": {
 		"WOKWI_CLI_TOKEN": "${localEnv:WOKWI_CLI_TOKEN}"
 	},

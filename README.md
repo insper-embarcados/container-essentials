@@ -1,2 +1,2 @@
-# infra-essencial
+# container-essencials
 Contains .devcontainer, freertos, pico-sdk and more.
