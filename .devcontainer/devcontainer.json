@@ -1,27 +1,7 @@
 {
 	"image": "rafaelcorsi/embarcados",
-	//defines debug
-	"workspaceFolder": "/workspace/embarcados/debugging",
-	"workspaceMount": "source=${localWorkspaceFolder},target=/workspace/embarcados/debugging,type=bind",
-
-	"mounts": [
-		{	
-			// mounts working-area based on debug directory
-			"source": "${localWorkspaceFolder}/",
-			"target": "/workspace/embarcados/working-area/",
-			"type": "bind"
-		},
-		// includes the infra-test-submodules
-		{
-			"source": "${localWorkspaceFolder}/../",
-			"target": "/workspace/embarcados/working-area/",
-			"type": "bind"
-		}
-
-	],
-	"remoteEnv": {
-		"WOKWI_CLI_TOKEN": "${localEnv:WOKWI_CLI_TOKEN}"
-	},
+	//"mounts": ["type=bind,source=/dev/bus/usb,target=/dev/bus/usb"],
+	//"runArgs": ["--privileged"],
 	"runArgs": [
 		"--cap-add=SYS_PTRACE",
 		"--security-opt",
